@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Insurance Fraud Detection </title>
+    <link rel="stylesheet" href="../static/style1.css">
+
+</head>
+
+<body>
+    
+    {% if (pred_res)==0 : %}
+    </div>Claim is</div> 
+    <div>
+      <div class="Legitimate">Legitimate</div>
+    </div>
+    {% elif (pred_res)==1 : %}
+  </div>Claim is</div> 
+  <div class="Fraudulent">Fraudulent !!</div>
+    {% endif %}
+    
+</body>
+        
+</html> 

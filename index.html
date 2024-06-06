@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Insurance Fraud Detection </title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+  <br><br> <h2> Detecting whether a health insurance claim is fraudulent or not. </h2><br><br><br>
+    <form action="/detection" method="post">
+      <br><br><h3>Enter the details below</h3>
+      <p> Beneficiary details:</p><br>
+      <label for="Beneficiary ID">Beneficiary ID</label>
+      <input type="text" id="Beneficiary ID" name="Beneficiary ID" value="BENE" pattern="BENE+[0-9]{5,}" title="BENE12345" required><br><br>
+      <label for="Birth Year">Birth Year</label>
+      <input type="text" id="Birth Year" name="Birth Year" placeholder="YYYY" pattern="[0-9]{4}" title="YYYY" required><br><br>
+      <p> If the beneficiary has particular disease, <br> select 1 otherwise select 0</p><br>
+      <label for="Alzheimer"> Alzheimer </label>
+      <select id="Alzheimer" name="Alzheimer" required>
+        <option hidden disabled selected value> Select </option>
+        <option value="1">1</option>
+        <option value="0">0</option>
+      </select><br><br>
+      <label for="Heart Failure"> Heart Failure</label>
+      <select id="Heart Failure" name="Heart Failure" required>
+        <option hidden disabled selected value> Select </option>
+        <option value="1">1</option>
+        <option value="0">0</option>
+      </select><br><br>
+      <label for="Chronic Kidney Disease"> Chronic Kidney Disease</label>
+      <select id="Chronic Kidney Disease" name="Chronic Kidney Disease" required>
+        <option hidden disabled selected value> Select </option>
+        <option value="1">1</option>
+        <option value="0">0</option>
+      </select><br><br>
+      <label for="Renal Disease"> Renal Disease</label>
+      <select id="Renal Disease" name="Renal Disease" required>
+        <option hidden disabled selected value> Select </option>
+        <option value="1">1</option>
+        <option value="0">0</option>
+      </select><br><br>
+      <label for="Cancer"> Cancer</label>
+      <select id="Cancer" name="Cancer" required> 
+        <option hidden disabled selected value> Select </option>
+        <option value="1">1</option>
+        <option value="0">0</option>
+      </select><br><br>
+      <label for="Obstructive Pulmonary"> Obstructive Pulmonary</label>
+      <select id="Obstructive Pulmonary" name="Obstructive Pulmonary" required>
+        <option hidden disabled selected value> Select </option>
+        <option value="1">1</option>
+        <option value="0">0</option>
+      </select><br><br>
+      <label for="Depression"> Depression</label>
+      <select id="Depression" name="Depression" required>
+        <option hidden disabled selected value> Select </option>
+        <option value="1">1</option>
+        <option value="0">0</option>
+      </select><br><br>
+      <label for="Diabetes"> Diabetes</label>
+      <select id="Diabetes" name="Diabetes"required >
+        <option hidden disabled selected value> Select </option>
+        <option value="1">1</option>
+        <option value="0">0</option>
+      </select><br><br>
+      <label for="Ischemic Heart"> Ischemic Heart</label>
+      <select id="Ischemic Heart" name="Ischemic Heart" required>
+        <option hidden disabled selected value> Select </option>
+        <option value="1">1</option>
+        <option value="0">0</option>
+      </select><br><br>
+      <label for="Osteo Porosis"> Osteo Porosis</label>
+      <select id="Osteo Porosis" name="Osteo Porosis" required>
+        <option hidden disabled selected value> Select </option>
+        <option value="1">1</option>
+        <option value="0">0</option>
+      </select><br><br>
+      <label for="Rheumatoid Arthritis"> Rheumatoid Arthritis</label>
+      <select id="Rheumatoid Arthritis" name="Rheumatoid Arthritis" required>
+        <option hidden disabled selected value> Select </option>
+        <option value="1">1</option>
+        <option value="0">0</option>
+      </select><br><br>
+      <label for="Stroke"> Stroke</label>
+      <select id="Stroke" name="Stroke" required>
+        <option hidden disabled selected value> Select </option>
+        <option value="1">1</option>
+        <option value="0">0</option>
+      </select><br><br>
+      <p> Claim details:</p><br>
+      <label for="Insurance Claim Amount Reimbursed">Insurance Claim Amount Reimbursed</label>
+      <input type="text" id="Insurance Claim Amount Reimbursed" name="Insurance Claim Amount Reimbursed"  required><br><br>
+      <label for="Total Annual Reimbursement Amount">Total Annual Reimbursement Amount</label>
+      <input type="text" id="Total Annual Reimbursement Amount" name="Total Annual Reimbursement Amount"  required><br><br>
+      <label for="Total Annual Deductible Amount">Total Annual Deductible Amount</label>
+      <input type="text" id="Total Annual Deductible Amount" name="Total Annual Deductible Amount" required><br><br>
+      <p> Provider (Hospital, Laboratory etc) details:</p><br>
+      <label for="Provider ID">Provider ID</label>
+      <input type="text" id="Provider ID" name="Provider ID" value="PRV" pattern="PRV+[0-9]{5,}" title="PRV12345" required><br><br>
+      <label for="Attending Physician ID">Attended Physician ID</label>
+      <input type="text" id="Attending Physician ID" name="Attending Physician ID" value="PHY" pattern="PHY+[0-9]{6,}" title="PHY123456" required><br><br>
+      <label for="Operating Physician ID">Operated Physician ID</label>
+      <input type="text" id="Operating Physician ID" name="Operating Physician ID" value="PHY" pattern="PHY+[0-9]{6,}" title="PHY123456" required><br><br>
+      <label for="Other Physician ID">Other Physician ID</label>
+      <input type="text" id="Other Physician ID" name="Other Physician ID" value="PHY" pattern="PHY+[0-9]{6,}" title="PHY123456" required><br><br>
+      <label for="Claim Admit Diagnosis Code">Claim Admit Diagnosis Code</label>
+      <input type="text" id="Claim Admit Diagnosis Code" name="Claim Admit Diagnosis Code" required><br><br>
+      <button type="submit"> Detect </button>
+    </form>  
+         
+</body> 
+</html> 
+  

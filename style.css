@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 0;
+  background-image: url("../static/3.jpg");
+  margin: 0;
+  overflow-x: hidden !important;
+}
+
+  p {
+    font-style: italic;
+    font-size: 16px;
+    color: #030304;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    position: absolute;
+    top: 5em;
+    left: 62em;
+    width:100%;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #030304;
+  }
+
+  select {
+    width: 16%;
+    padding: 8px;
+    border: 2px solid #0b0505;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+
+  input[type="text"] {
+    width: 14.9%;
+    padding: 8px;
+    border: 2px solid #0b0505;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+
+  input[type="number"] {
+    width: 14.9%;
+    padding: 8px;
+    border: 2px solid #0b0505;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 8px 20px;
+    background-color: #030304;
+    color: #f7f7fc;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #020202;
+  }
+  
+  h2 {
+    font-size: xx-large;
+    font-style: italic;
+    color: #030304;
+    animation-duration: 40s;
+    animation-name: move;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes move {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: -65%;
+    }
+  }
+  

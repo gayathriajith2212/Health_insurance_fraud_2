@@ -1,0 +1,43 @@
+body{
+    background-image: url("../static/3.jpg");
+    font-size:25px;
+    position: absolute;
+    top: 500px;
+    left:680px;
+  }
+
+  .Fraudulent {
+    font-size: 60px;
+    color: darkred;
+    white-space:nowrap;
+    animation: blinker 1s linear infinite;
+    position: absolute;
+    top: 60px;
+    left:-85px;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  .Legitimate {
+    font-size: 60px;
+    color: rgb(7, 7, 208);
+    animation: showup 16s infinite;
+    position: absolute;
+    top: 60px;
+    left:-85px;
+    }
+    
+    @keyframes showup {
+        0% {opacity:0;}
+        20% {opacity:1;}
+        80% {opacity:1;}
+        100% {opacity:0;}
+    }
+ 
+  
+
+    
